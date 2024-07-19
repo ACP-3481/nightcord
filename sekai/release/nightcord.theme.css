@@ -1,9 +1,9 @@
 /**
  * @name Nightcord
- * @author Seilent
+ * @author ACP-3481
  * @version 1.0.1
- * @description Discord theme based on niigo's nightcord theme
- * @source https://github.com/seilent/Nightcord
+ * @description Discord theme based on niigo's nightcord theme. Forked from https://github.com/seilent/Nightcord
+ * @source https://github.com/ACP-3481/Nightcord
 */
 
 /*FONT*/
@@ -18,10 +18,10 @@
 :root {
       --font-primary: "Nunito";
       --font-japanese: "Noto Sans JP";
-      
+
       /*Use HSL color*/
       --accent-hue: 253;
-      
+
 
       /* Changing the saturation and light might cause the background to become too bright */
       --accent-saturation: 25%;
@@ -36,11 +36,14 @@
 /** MOAR STUFF **/
 
 :root {
+  --spacing: 12px;
+  --brand-500: var(--background-primary);
   --font-weight: 400;
   --nightcord-accent: hsl(var(--accent-hue), calc(var(--accent-saturation) / 2), calc(var(--accent-light) * 1.6));
   --nightcord-dark: hsl(var(--accent-hue), calc(var(--accent-saturation) / 1.2), calc(var(--accent-light) / 1.2));
   --nightcord-light: hsl(var(--accent-hue), calc(var(--accent-saturation) / 1.2), calc(var(--accent-light) * 1.5));
-  --channels-default: hsl(var(--accent-hue), calc(var(--accent-saturation) / 2.5), 60%);
+  --channels-default: var(--text-normal);/*hsl(var(--accent-hue), calc(var(--accent-saturation) / 2.5), 60%);*/
+  --channel-icon: var(--text-normal);
   --text-bright: hsl(var(--accent-hue), calc(var(--accent-saturation) / 1), 85%);
   --text-normal: hsl(var(--accent-hue), calc(var(--accent-saturation) / 2.5), calc((100% - var(--accent-light)) * 1.30));
   --text-muted: hsl(var(--accent-hue), calc(var(--accent-saturation) / 1.8), calc((100% - var(--accent-light)) * 0.9));
@@ -67,7 +70,7 @@
   --scrollbar-auto-scrollbar-color-thumb: var(--scrollbar-thin-thumb);
   --scrollbar-auto-scrollbar-color-track: var(--scrollbar-auto-track);
   --interactive-normal: var(--text-normal);
-  --interactive-muted: var(--text-normal);
+  --interactive-muted: var(--text-muted);
   --brand-experiment-15a: var(--scrollbar-thin-thumb);
   --brand-experiment-560: var(--nightcord-accent);
   --brand-experiment-600: var(--background-secondary);
@@ -77,3 +80,114 @@
   --text-link: var(--text-muted);
   --deprecated-card-bg: var(--background-secondary);
 }
+
+.header_fd6364 {
+  padding: 16px 16px;
+}
+
+.tutorialContainer_f9623d path#3d395d92-8939-43c1-b3e3-305fbf716b30-blob_mask{
+  display: none;
+}
+
+.subtitleContainer_a7d72e {
+  padding: 4px 4px;
+}
+
+.wrapper_f90abb path {
+
+display: none;
+
+}
+
+[aria-label="User area"] div[class^='container_b2ca13']{
+  background: #473f62 !important;
+  padding: 8px 8px;
+}
+
+.searchBar_f0963d {
+  padding: 4px 10px;
+}
+
+[aria-label="Friends"] section{
+  padding: 16px;
+}
+
+.childWrapper_f90abb {
+  background: url('http://localhost:8086/theme-files/K-nightcord.svg') center/cover no-repeat;
+  background-size: 80%;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.acronym_f90abb {
+  background: url('http://localhost:8086/theme-files/Empty-circle.svg') center/cover no-repeat;
+}
+
+.wordmark_a934d8 path {
+  display: none;
+}
+.wordmark_a934d8 svg{
+  background: url('http://localhost:8086/theme-files/Nightcord-title.svg') center/cover no-repeat;
+  overflow: visible;
+  width: 100px;
+  height: 16px;
+}
+
+.guilds_a4d4d9 {
+  background-color: var(--nightcord-dark);
+}
+
+.root_dd069c {
+  background-color: var(--nightcord-dark);
+}
+
+
+.iconWrapper_fc4f04:not(.clickable_fc4f04) path{
+  display:none;
+}
+
+.iconWrapper_fc4f04:not(.clickable_fc4f04) svg{
+  background: url('http://localhost:8086/theme-files/K-logo.svg') center/cover no-repeat;
+}
+
+.typeWindows_a934d8 {
+  min-height: 24px;
+}
+
+/* Add colored circle buttons like nightcord radio */
+/*
+[class^='winButton'] > svg {
+	display: none;
+}
+[class^='winButton'] {
+	background: none !important;
+	top: 0;
+	width: calc(var(--spacing) + 8px);
+	height: calc(var(--spacing) + 8px);
+	margin: -1px 4px 0px 0px;
+}
+[class^='winButtonClose'] {
+	margin: -1px calc(var(--spacing)) 0px 0px;
+}
+[class^='winButton']::after {
+	content: '';
+	height: 14px;
+	width: 14px;
+	border-radius: 14px;
+}
+[class^='winButton']:hover::after {
+	filter: brightness(0.8);
+}
+[class^='winButton']:active::after {
+	transform: scale(0.9);
+}
+[class^='winButtonClose']::after {
+	background-color: #fd5cb5 !important;
+}
+[class^='winButtonMinMax']:nth-child(3)::after {
+	background-color: #fde758 !important;
+}
+[class^='winButtonMinMax']:nth-child(4)::after {
+	background-color: #48ebfe !important;
+}
+*/
